@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des Tâches</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gestionnaire de tâches</title>
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-  
-    <script>
-        try {
-    let recettes = 500;
-    let nbPlaceVendue = 30;
-    let prixPlace = recettes / nbPlaceVendue; // Correction ici
-    console.log(prixPlace);
-} catch (erreur) {
-    console.log("Une erreur est survenue");
-}
-    </script>
+    <div class="container">
+        <button ><a href="list.html">liste des Tâches</a></button>
+
+        <h1>Gestionnaire de tâches</h1>
+        <form id="task-form">
+            <input type="text" id="title" placeholder="Titre de la tâche" required>
+            <textarea id="description" placeholder="Description de la tâche" required></textarea>
+            <input type="date" id="deadline" required>
+            <select id="priority" required>
+                <option value="Faible">Faible</option>
+                <option value="Moyenne">Moyenne</option>
+                <option value="Forte">Forte</option>
+            </select>
+            <button type="submit">Ajouter la tâche</button>
+        </form>
+        <ul id="task-list" style="display: none;">
+            <!-- Les tâches seront ajoutées ici -->
+        </ul>
+    </div>
+    <script src="public/js/app.js"></script>
 </body>
 </html>

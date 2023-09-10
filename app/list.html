@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/styleList.css">
+    <title>Application de Gestion de Tâches</title>
+</head>
+<body>
+    <button ><a href="index.html">Ajouter Tâche</a></button>
+
+     
+    <ul id="task-list"></ul>
+    <form id="task-form">
+        <label for="title">Titre de la Tâche:</label>
+        <input type="text" id="title" required>
+        
+        <label for="description">Description:</label>
+        <input type="text" id="description" required>
+        
+        <label for="deadline">Date Limite:</label>
+        <input type="date" id="deadline" required>
+
+        <label for="priority">Priorité:</label>
+        <select id="priority">
+            <option value="Faible">Faible</option>
+            <option value="Moyenne">Moyenne</option>
+            <option value="Forte">Forte</option>
+        </select>
+        
+        <button type="submit">Modifier Tâche</button>
+    </form>
+
+    <!-- <div id="task-popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close-popup">&times;</span>
+            <h2>Modifier la Tâche</h2>
+            
+            <form id="popup-form">
+                <label for="popup-title">Titre de la Tâche:</label>
+                <input type="text" id="popup-title" required>
+                
+                <label for="popup-description">Description:</label>
+                <input type="text" id="popup-description" required>
+                
+                <label for="popup-deadline">Date Limite:</label>
+                <input type="date" id="popup-deadline" required>
+    
+                <label for="popup-priority">Priorité:</label>
+                <select id="popup-priority">
+                    <option value="Faible">Faible</option>
+                    <option value="Moyenne">Moyenne</option>
+                    <option value="Forte">Forte</option>
+                </select>
+    
+                <label for="popup-completed">Complétée:</label>
+                <input type="checkbox" id="popup-completed">
+                
+                <button type="submit">Enregistrer</button>
+                
+            </form>
+        </div>
+    </div> -->
+    <script src="public/js/app.js"></script>
+    <script>function openForm() {
+        document.getElementById("task-popup").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("close-popup").style.display = "none";
+      }</script>
+
+</body>
+</html>
