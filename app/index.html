@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestionnaire de tâches</title>
-    <link rel="stylesheet" href="public/css/style.css">
+    <title>Gestions du tache</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <button ><a href="list.html">liste des Tâches</a></button>
-
-        <h1>Gestionnaire de tâches</h1>
-        <form id="task-form">
-            <input type="text" id="title" placeholder="Titre de la tâche" required>
-            <textarea id="description" placeholder="Description de la tâche" required></textarea>
-            <input type="date" id="deadline" required>
-            <select id="priority" required>
+    <h1>Gestions du tache SIMLPLON </h1>
+    <div id="task-form" class="container">
+            <input type="text" id="title" placeholder="Titre">
+            <input type="text" id="description" placeholder="Description">
+            <input type="date" id="deadline">
+            <select id="priority">
                 <option value="Faible">Faible</option>
                 <option value="Moyenne">Moyenne</option>
                 <option value="Forte">Forte</option>
             </select>
-            <button type="submit">Ajouter la tâche</button>
-        </form>
-        <ul id="task-list" style="display: none;">
-            <!-- Les tâches seront ajoutées ici -->
-        </ul>
+            <button id="add-task">Ajouter</button>
+            <button id="sort-tasks">Trier par date limite</button>
     </div>
-    <script src="public/js/app.js"></script>
+    
+    <ul id="task-list" class="list"></ul>
+
+    <script src="app.js"></script>
 </body>
 </html>
